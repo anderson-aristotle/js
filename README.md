@@ -337,10 +337,7 @@ Remember how we used node as a REPL earlier? It actually has a completely
 different use as well--as a script runner. Let's see how that works while we
 explore some examples of flow control.
 
-To start, exit your REPL using `CTRL-d` and make sure you're in the 'bin' folder. Add 3 files using the `touch`
-command from your terminal.
-
-`touch greeter.js psychic.js forLoop.js`
+To exit your REPL using `CTRL-d` and let's write some code in actual files.
 
 #### Printing to the Console
 
@@ -355,7 +352,7 @@ a good point of reference for debugging.
 
 #### `if` Statements
 
-Open `ifStatement.js` and we'll type some code in...
+Open `bin/ifStatement.js` and we'll type some code in...
 
 <!-- start code block file="snippets/conditionals1.js" -->
 ```js
@@ -382,14 +379,19 @@ Press the UP arrow on your keyboard to reload the previous line and change
 (`enter`).
 
 ##### Ternary Operator
-Ternary operators are basically a shorthand way of writing `if else` statements. An example of a ternary operator can be found below:
+Ternary operators are basically a shorthand way of writing `if else` statements.
+An example of a ternary operator can be found below:
 <!-- start code block file="snippets/ternaryOperator1.js" -->
 ```js
 const height = 72
 height >= 72 ? console.log('You can Ride') : console.log('Tea Cups Only')
 ```
 <!-- end code block -->
-This example might look a little bit confusing, but it is relatively simple if we break it down: First, the statement before the question mark is evaluated as being either `true` or `false`. If the statement is `true`, then the statement to the left of the colon is executed. If it is `false`, the statement to the right of the colon is executed.
+This example might look a little bit confusing, but it is relatively simple if
+we break it down: First, the statement before the question mark is evaluated as
+being either `true` or `false`. If the statement is `true`, then the statement
+to the left of the colon is executed. If it is `false`, the statement to the
+right of the colon is executed.
 
 #### `while` Loops
 A simple while loop that logs from 0 - 9
@@ -403,7 +405,7 @@ while (i < 10) {
 ```
 <!-- end code block -->
 
-Open `whileLoop.js` and we'll type some code in...
+Open `bin/whileLoop.js` and we'll type some code in...
 <!-- start code block file="snippets/conditionals2.js" -->
 ```js
 'use strict'
@@ -433,14 +435,17 @@ What results do you get?
 
 #### String Interpolation
 
-You may have noticed that in `bin/guess.js`, we used the variable `answer` in order to display the result of the user's input. The combination of a string and a variable is called string interpolation. To produce this interpolation is to write it as such:
+You may have noticed that in `bin/guess.js`, we used the variable `answer` in
+order to display the result of the user's input. The combination of a string and
+ a variable is called string interpolation. To produce this interpolation is to
+ write it as such:
 <!-- start code block file="snippets/stringInterpolation1.js" -->
 ```js
 console.log(`Sorry, your guess '${answer}', isn't correct.`)
 ```
 <!-- end code block -->
 This method of interpolating is called Template Strings.
-Note: Make sure you are using backticks instead of single or double quotes.
+Note: Make sure you are using *backticks* instead of single or double quotes.
 
 #### `for` Loops
 Open `forLoop.js` and we'll type some code in...
@@ -495,8 +500,8 @@ If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
 Save it as it in `bonusChallenge.js`
 
-Note: refer to the beginning lines of our `bin/ifStatement.js` code to enable working
-with user input.
+Note: refer to the beginning lines of our `bin/ifStatement.js` code to enable
+working with user input.
 
 ## Additional Resources
 
