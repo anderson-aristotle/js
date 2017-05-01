@@ -6,16 +6,6 @@
 
 A review of many of the building blocks of JavaScript.
 
-Although ECMAScript 2015 ([ES2015](http://www.ecma-international.org/ecma-262/6.0/))
-is the latest standard, adopted in June of 2015, we'll mostly focus on features
-from the [ES5](http://www.ecma-international.org/ecma-262/5.1/) standard.  Some
-of the references in this document may include descriptions of ES2015 features.
-These features will usually be denoted with `(new in ECMAScript 2015)` in the
-main text or with a **flask icon** in the navigation sidebar.
-
-`let` and `const` are the primary ES2015 features introduced in this training.  In
-order to to use these features, we'll need to be in strict mode.
-
 ## Objectives
 
 By the end of this lesson, students should be able to:
@@ -79,21 +69,27 @@ runner to evaluate expressions and explore JavaScript features.
 
 #### Code Along: Declare Variables
 
+Type `node` into your terminal to start the Node.js program REPL.
+The `>` symbol tells us we are now interacting with the Node.js REPL
 ```bash
 $ node
-> 'use strict'
 >
 ```
 
+The first line we will run in our Node.js REPL is to `use strict`
+<!-- start code block file="snippets/declareVariables1.js" -->
 ```js
-> bornOn
+'use strict'
 ```
+<!-- end code block -->
 
 Variables need to be declared.
-
+<!-- start code block file="snippets/declareVariables2.js" -->
 ```js
-> let bornOn
+const bornOn = '1982-09-29'
+console.log(bornOn)
 ```
+<!-- end code block -->
 
 Variables name storage for the value they contain.  Because JavaScript is a
 dynamically typed language, you can assign a value of one type to a variable and
@@ -138,7 +134,7 @@ An expression is a combination of literals, variables, operators, function
 invocations and sub-expressions that are interpreted and produce a value.  Not
 all such combinations produce _sensible_ results.
 
-The simplest expression is a variable or literal followed by a semicolon. More
+The simplest expression is a variable or literal. More
 complicated expressions are formed by combining simpler expressions using
 operators.
 
@@ -149,22 +145,27 @@ the values of the variables will produce the same result.
 
 Assignment changes the value of a variable.
 
+<!-- start code block file="snippets/assignVariables1.js" -->
 ```js
-let height
-height
-height = 72
-height
 let name
+console.log(name)
 name = 'Brian'
-name
+console.log(name)
+name = 'Sarah'
+console.log(name)
 ```
+<!-- end code block -->
 
 Remember: JavaScript variables are untyped.
 
+<!-- start code block file="snippets/assignVariables2.js" -->
 ```js
+let name
 name = 'Brian'
 name = 29
+console.log(name + 1)
 ```
+<!-- end code block -->
 
 Although it doesn't cause an error, avoid confusing code like the above.
 
@@ -175,39 +176,56 @@ sitting next to you in it. Now change it to someone else in the room!
 ##### Constants
 
 Constants must be initialized, assigned a value, when created.  Uninitialized
-constants are a syntax error in Firefox.  In Chrome or node they will always
-have the value `undefined`.
+constants are a syntax error.
 
+<!-- start code block file="snippets/constants1.js" -->
+```js
+const variableOne
+// const variableOne
+//      ^^^^^^^^^^^^^
+// SyntaxError: Missing initializer in const declaration
+```
+<!-- end code block -->
+
+<!-- start code block file="snippets/constants2.js" -->
 ```js
 const pi = 3.14159265359 // rounded
 pi
-const e
-e = 2.71828182846 // rounded
+const e = 2.71828182846 // rounded
 e
 ```
+<!-- end code block -->
 
 #### Numeric expressions
 
 Simple calculations:
 
+<!-- start code block file="snippets/numerics1.js" -->
 ```js
 5 + 3
 7 - 2
 11 % 5
 ```
+<!-- end code block -->
 
 Expressions with variables only change values with assignment.
 
+<!-- start code block file="snippets/numerics2.js" -->
 ```js
+let height
 height = 80
-height - 1
-height
+height - 10
+console.log(height)
+height = height - 10
+console.log(height)
 ```
+<!-- end code block -->
 
 What will `height` be at the end of the 3 lines above?
 
 Now let's compare some common methods of counting.
 
+<!-- start code block file="snippets/numerics3.js" -->
 ```js
 let i
 i = 0
@@ -221,26 +239,32 @@ i
 i++
 i
 ```
+<!-- end code block -->
 
 Note: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
 evaluate i, whereas `i++` will evaluate i and then increment.
 
 #### String expressions
 
+<!-- start code block file="snippets/strings1.js" -->
 ```js
-let givenName
-let surname
-let fullName
-givenName = 'Brian'
-surname = 'Berzellini'
-fullName = givenName + ' ' + surname
+const givenName = 'Brian'
+const surname = 'Berzellini'
+const fullName = givenName + ' ' + surname
+console.log(fullName)
 ```
+<!-- end code block -->
 
 Try it with your name now!
 
+<!-- start code block file="snippets/strings2.js" -->
 ```js
-bornOn = '1982-09-29'
+let bornOn = '1982 - 9 - 29'
+console.log(bornOn)
+bornOn = 1982 - 9 - 29
+console.log(bornOn)
 ```
+<!-- end code block -->
 
 What happens if you don't enter the date as a string?
 
@@ -252,14 +276,16 @@ interpreted as a boolean.  We'll use that fact when we get to flow control.
 Boolean expression combine using the logical and `&&` and logical `||`
 operators.
 
+<!-- start code block file="snippets/boolean1.js" -->
 ```js
 let height = 72
 height === 60
 height > 72
 height = 76
-height > 72
+height >= 72
 height > 72 && height < 78
 ```
+<!-- end code block -->
 
 The logical operators 'short circuit', which means they stop evaluating operands
 as soon as the expression is `false` for `&&`, or true for `||`.
@@ -280,14 +306,14 @@ All values in JS are inherently truthy with the exception of these 6 values:
 Note:  The negation of a truthy value is `false` and the negation of a falsy
 value is `true`.
 
+<!-- start code block file="snippets/boolean2.js" -->
 ```js
-let truthyValue
-let falsyValue
-truthyValue = 'A non-empty string'
-falsyValue = 0
-!truthyValue
-!falsyValue
+const truthyValue = 'A non-empty string'
+const falsyValue = 0
+console.log(!truthyValue)
+console.log(!falsyValue)
 ```
+<!-- end code block -->
 
 #### Demo: Type conversions
 
@@ -311,10 +337,7 @@ Remember how we used node as a REPL earlier? It actually has a completely
 different use as well--as a script runner. Let's see how that works while we
 explore some examples of flow control.
 
-To start, exit your REPL using `CTRL-d` and make sure you're in the 'lib' folder. Add 3 files using the `touch`
-command from your terminal.
-
-`touch greeter.js psychic.js forLoop.js`
+To exit your REPL using `CTRL-d` and let's write some code in actual files.
 
 #### Printing to the Console
 
@@ -329,14 +352,13 @@ a good point of reference for debugging.
 
 #### `if` Statements
 
-Open `greeter.js` and we'll type some code in...
+Open `bin/ifStatement.js` and we'll type some code in...
 
+<!-- start code block file="snippets/conditionals1.js" -->
 ```js
 'use strict'
-//We'll learn about require later in the course
-const ask = require('../lib/ask.js')
-
-let name = ask("What's your name? ")
+// We'll learn about process.argv later in the course
+const name = process.argv[2]
 if (name === 'Brian') {
   console.log('Hi, Brian!')
 } else if (name === 'Jeff') {
@@ -347,54 +369,33 @@ if (name === 'Brian') {
   console.log('Hi, stranger.')
 }
 ```
+<!-- end code block -->
 
 Save this file and return to your terminal.
-Type `node greeter.js`
-Type your name and hit ENTER.
+Type `node ifStatement.js Brian`
 
-Press the UP arrow on your keyboard to reload the previous line OR type
-`node greeter.js` again.
-Type `Lauren` and hit ENTER.
+Press the UP arrow on your keyboard to reload the previous line and change
+`Brian` to `Lauren` OR type `node ifStatement.js Lauren`. and press `return`
+(`enter`).
+
+##### Ternary Operator
+Ternary operators are basically a shorthand way of writing `if else` statements.
+An example of a ternary operator can be found below:
+<!-- start code block file="snippets/ternaryOperator1.js" -->
+```js
+const height = 72
+height >= 72 ? console.log('You can Ride') : console.log('Tea Cups Only')
+```
+<!-- end code block -->
+This example might look a little bit confusing, but it is relatively simple if
+we break it down: First, the statement before the question mark is evaluated as
+being either `true` or `false`. If the statement is `true`, then the statement
+to the left of the colon is executed. If it is `false`, the statement to the
+right of the colon is executed.
 
 #### `while` Loops
-
-Now go to `psychic.js`
-
-```js
-'use strict'
-//We'll learn about require later in the course
-const ask = require('../lib/ask.js')
-
-let count = 0
-let answer = ''
-
-while (answer !== 'Jeff') {
-  answer = ask('Guess my name? ')
-  count = count + 1
-}
-console.log('You got it in ' + count + ' tries!')
-```
-
-Save this file and return to your terminal.
-Type `node psychic.js`
-Type your name and hit ENTER.
-Try your neighbor's name.
-Try `Antony`.
-
-#### `for` Loops
-
-```js
-for (let i = 0; i < 10; i++) {
-  console.log(i)
-}
-```
-
-Save this file and return to your terminal.
-Think about what you expect this file to produce to the terminal...
-Now type `node forLoop.js` and hit ENTER.
-
-which is _almost_ equivalent to:
-
+A simple while loop that logs from 0 - 9
+<!-- start code block file="snippets/loops2.js" -->
 ```js
 let i = 0
 while (i < 10) {
@@ -402,9 +403,77 @@ while (i < 10) {
   i++
 }
 ```
+<!-- end code block -->
+
+Open `bin/whileLoop.js` and we'll type some code in...
+<!-- start code block file="snippets/conditionals2.js" -->
+```js
+'use strict'
+
+let count = process.argv[2]
+
+while (count < 5) {
+  console.log('Inside of the loop, count is ' + count)
+  count++
+}
+
+console.log('Outside of the loop, count is ' + count)
+```
+<!-- end code block -->
+Save this file and return to your terminal.
+Type `node whileLoop.js 1`
+
+Press the UP arrow on your keyboard to reload the previous line and change
+`1` to `5` OR type `node whileLoop.js 5`. and press `return`
+(`enter`).
+
+Now let's look at a more advanced example of conditions and loops `bin/guess.js`
+In your terminal, type `node bin/guess.js Mike`
+Type `Stacey`
+Type `Brian`
+What results do you get?
+
+#### String Interpolation
+
+You may have noticed that in `bin/guess.js`, we used the variable `answer` in
+order to display the result of the user's input. The combination of a string and
+ a variable is called string interpolation. To produce this interpolation is to
+ write it as such:
+<!-- start code block file="snippets/stringInterpolation1.js" -->
+```js
+console.log(`Sorry, your guess '${answer}', isn't correct.`)
+```
+<!-- end code block -->
+This method of interpolating is called Template Strings.
+Note: Make sure you are using *backticks* instead of single or double quotes.
+
+#### `for` Loops
+Open `forLoop.js` and we'll type some code in...
+<!-- start code block file="snippets/loops1.js" -->
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(i)
+}
+```
+<!-- end code block -->
+
+Save this file and return to your terminal.
+Think about what you expect this file to produce to the terminal...
+Now type `node forLoop.js` and hit ENTER.
+
+which is _almost_ equivalent to:
+<!-- start code block file="snippets/loops2.js" -->
+```js
+let i = 0
+while (i < 10) {
+  console.log(i)
+  i++
+}
+```
+<!-- end code block -->
 
 Nesting conditionals in loops:
-
+<!-- start code block file="snippets/loops3.js" -->
 ```js
 for (let i = 0; i < 10; i++) {
   if (i === 5) {
@@ -414,23 +483,25 @@ for (let i = 0; i < 10; i++) {
   }
 }
 ```
+<!-- end code block -->
 
 Save. Think about what you expect this file to produce to the terminal...
 What do we type in the terminal to run our code?
 
 #### Lab: Build a Script Yourself
 
-Try building your own script in the ./bin directory titled `guessMyAge.js`. Have
+Try building your own script in the file titled `bin/guessMyAge.js`. Have
 this script ask the user their age, and if they're older than 90 print to the
 console "You old fart!" If they're under the age of 10 print "Why are you on a
 computer? Go outside!" If they're between 10 and 90, print "How boring...".
+You should be able to run the file like `node bin/guessMyAge.js 100`.
 
 If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
 Save it as it in `bonusChallenge.js`
 
-Note: refer to the beginning lines of our `greeter.js` code to enable working
-with user input.
+Note: refer to the beginning lines of our `bin/ifStatement.js` code to enable
+working with user input.
 
 ## Additional Resources
 
