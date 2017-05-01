@@ -18,7 +18,6 @@ let correct = false
 // check each line entered for a correct guess
 // This is where we are using a conditional to check the name
 rl.on('line', function (answer) {
-
   count = count + 1
 
   if (answer === 'Brian') {

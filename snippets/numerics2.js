@@ -1,3 +1,6 @@
+let height
 height = 80
-height - 1
-height
+height - 10
+console.log(height)
+height = height - 10
+console.log(height)

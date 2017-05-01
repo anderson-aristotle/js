@@ -1,7 +1,6 @@
-let height
-height
-height = 72
-height
 let name
+console.log(name)
 name = 'Brian'
-name
+console.log(name)
+name = 'Sarah'
+console.log(name)

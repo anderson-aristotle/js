@@ -1,6 +1,4 @@
-let givenName
-let surname
-let fullName
-givenName = 'Brian'
-surname = 'Berzellini'
-fullName = givenName + ' ' + surname
+const givenName = 'Brian'
+const surname = 'Berzellini'
+const fullName = givenName + ' ' + surname
+console.log(fullName)

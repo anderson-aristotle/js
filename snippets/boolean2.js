@@ -1,6 +1,4 @@
-let truthyValue
-let falsyValue
-truthyValue = 'A non-empty string'
-falsyValue = 0
-!truthyValue
-!falsyValue
+const truthyValue = 'A non-empty string'
+const falsyValue = 0
+console.log(!truthyValue)
+console.log(!falsyValue)

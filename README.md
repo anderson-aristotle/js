@@ -86,7 +86,8 @@ The first line we will run in our Node.js REPL is to `use strict`
 Variables need to be declared.
 <!-- start code block file="snippets/declareVariables2.js" -->
 ```js
-let bornOn
+const bornOn = '1982-09-29'
+console.log(bornOn)
 ```
 <!-- end code block -->
 
@@ -146,13 +147,12 @@ Assignment changes the value of a variable.
 
 <!-- start code block file="snippets/assignVariables1.js" -->
 ```js
-let height
-height
-height = 72
-height
 let name
+console.log(name)
 name = 'Brian'
-name
+console.log(name)
+name = 'Sarah'
+console.log(name)
 ```
 <!-- end code block -->
 
@@ -160,8 +160,10 @@ Remember: JavaScript variables are untyped.
 
 <!-- start code block file="snippets/assignVariables2.js" -->
 ```js
+let name
 name = 'Brian'
 name = 29
+console.log(name + 1)
 ```
 <!-- end code block -->
 
@@ -210,9 +212,12 @@ Expressions with variables only change values with assignment.
 
 <!-- start code block file="snippets/numerics2.js" -->
 ```js
+let height
 height = 80
-height - 1
-height
+height - 10
+console.log(height)
+height = height - 10
+console.log(height)
 ```
 <!-- end code block -->
 
@@ -243,12 +248,10 @@ evaluate i, whereas `i++` will evaluate i and then increment.
 
 <!-- start code block file="snippets/strings1.js" -->
 ```js
-let givenName
-let surname
-let fullName
-givenName = 'Brian'
-surname = 'Berzellini'
-fullName = givenName + ' ' + surname
+const givenName = 'Brian'
+const surname = 'Berzellini'
+const fullName = givenName + ' ' + surname
+console.log(fullName)
 ```
 <!-- end code block -->
 
@@ -256,7 +259,10 @@ Try it with your name now!
 
 <!-- start code block file="snippets/strings2.js" -->
 ```js
-bornOn = '1982-09-29'
+let bornOn = '1982 - 9 - 29'
+console.log(bornOn)
+bornOn = 1982 - 9 - 29
+console.log(bornOn)
 ```
 <!-- end code block -->
 
@@ -302,12 +308,10 @@ value is `true`.
 
 <!-- start code block file="snippets/boolean2.js" -->
 ```js
-let truthyValue
-let falsyValue
-truthyValue = 'A non-empty string'
-falsyValue = 0
-!truthyValue
-!falsyValue
+const truthyValue = 'A non-empty string'
+const falsyValue = 0
+console.log(!truthyValue)
+console.log(!falsyValue)
 ```
 <!-- end code block -->
 
@@ -381,7 +385,8 @@ Press the UP arrow on your keyboard to reload the previous line and change
 Ternary operators are basically a shorthand way of writing `if else` statements. An example of a ternary operator can be found below:
 <!-- start code block file="snippets/ternaryOperator1.js" -->
 ```js
-3 > 4 ? console.log('Bigger') : console.log('Smaller')
+const height = 72
+height >= 72 ? console.log('You can Ride') : console.log('Tea Cups Only')
 ```
 <!-- end code block -->
 This example might look a little bit confusing, but it is relatively simple if we break it down: First, the statement before the question mark is evaluated as being either `true` or `false`. If the statement is `true`, then the statement to the left of the colon is executed. If it is `false`, the statement to the right of the colon is executed.
