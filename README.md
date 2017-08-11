@@ -501,7 +501,7 @@ You should be able to run the file like `node bin/guessAge.js 100`.
 
 If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
-Save it as it in `bonusChallenge.js`
+Save it in `bin/bonusChallenge.js`
 
 Note: refer to the beginning lines of our `bin/ifStatement.js` code to enable
 working with user input.
