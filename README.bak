@@ -16,9 +16,6 @@ By the end of this, developers should be able to:
 -   Evaluate simple JavaScript by inspection
 -   Write simple scripts that use flow control
 
-## Prerequisites
--   WDI Fundamentals
-
 ## Preparation
 
 1.  Fork and clone this repository.
@@ -127,7 +124,7 @@ from higher to lower precedence.
 | relation, instance                                   | left-to-right | `<` `<=` `>` `>=` `instanceof` |
 | strict equality                                      | left-to-right | `===` `!==`                    |
 | logical and                                          | left-to-right | `&&`                           |
-| logical or                                           | left-to-right | &#124;&#124;                   |
+| logical or                                           | left-to-right | `||`                           |
 | conditional                                          | right-to-left | `?:`                           |
 | assignment                                           | right-to-left | `=` `+=` `-=` `*=` `/=` `%=`   |
 
@@ -340,7 +337,7 @@ Remember how we used node as a REPL earlier? It actually has a completely
 different use as well--as a script runner. Let's see how that works while we
 explore some examples of flow control.
 
-To exit your REPL, use CTRL-d or type `.exit` and let's write some code in actual files.
+To exit your REPL using `CTRL-d` and let's write some code in actual files.
 
 #### Printing to the Console
 
@@ -439,15 +436,16 @@ What results do you get?
 #### String Interpolation
 
 You may have noticed that in `bin/guess.js`, we used the variable `answer` in
-order to display the result of the user's input. The combination of a string and a variable is called string interpolation. To produce this interpolation is to
+order to display the result of the user's input. The combination of a string and
+ a variable is called string interpolation. To produce this interpolation is to
  write it as such:
 <!-- start code block file="snippets/stringInterpolation1.js" -->
 ```js
 console.log(`Sorry, your guess '${answer}', isn't correct.`)
 ```
 <!-- end code block -->
-This method of string interpolation is done using Template Literals.
-Note: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+This method of interpolating is called Template Strings.
+Note: Make sure you are using *backticks* instead of single or double quotes.
 
 #### `for` Loops
 Open `forLoop.js` and we'll type some code in...
@@ -492,15 +490,15 @@ What do we type in the terminal to run our code?
 
 #### Lab: Build a Script Yourself
 
-Try building your own script in the file titled `bin/guessAge.js`. Have
-this script accept an age argument, and if they're older than 90 print to the
+Try building your own script in the file titled `bin/guessMyAge.js`. Have
+this script ask the user their age, and if they're older than 90 print to the
 console "You old fart!" If they're under the age of 10 print "Why are you on a
 computer? Go outside!" If they're between 10 and 90, print "How boring...".
-You should be able to run the file like `node bin/guessAge.js 100`.
+You should be able to run the file like `node bin/guessMyAge.js 100`.
 
 If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
-Save it in `bin/bonusChallenge.js`
+Save it as it in `bonusChallenge.js`
 
 Note: refer to the beginning lines of our `bin/ifStatement.js` code to enable
 working with user input.
