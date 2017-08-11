@@ -337,7 +337,7 @@ Remember how we used node as a REPL earlier? It actually has a completely
 different use as well--as a script runner. Let's see how that works while we
 explore some examples of flow control.
 
-To exit your REPL using `CTRL-d` and let's write some code in actual files.
+To exit your REPL, use CTRL-d or type `.exit` and let's write some code in actual files.
 
 #### Printing to the Console
 
