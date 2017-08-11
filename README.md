@@ -437,15 +437,15 @@ What results do you get?
 
 You may have noticed that in `bin/guess.js`, we used the variable `answer` in
 order to display the result of the user's input. The combination of a string and
- a variable is called string interpolation. To produce this interpolation is to
+previ a variable is called string interpolation. To produce this interpolation is to
  write it as such:
 <!-- start code block file="snippets/stringInterpolation1.js" -->
 ```js
 console.log(`Sorry, your guess '${answer}', isn't correct.`)
 ```
 <!-- end code block -->
-This method of interpolating is called Template Strings.
-Note: Make sure you are using *backticks* instead of single or double quotes.
+This method of string interpolation is done using Template Literals.
+Note: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
 Open `forLoop.js` and we'll type some code in...
