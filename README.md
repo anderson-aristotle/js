@@ -8,7 +8,7 @@ A review of many of the building blocks of JavaScript.
 
 ## Objectives
 
-By the end of this lesson, students should be able to:
+By the end of this, developers should be able to:
 
 -   List all 5 JavaScript primitives and give an example of each
 -   Identify the operator in an expression and explain what it does
@@ -18,10 +18,10 @@ By the end of this lesson, students should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
+1.  Fork and clone this repository.
+ [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
 1.  Create a new branch, `training`, for your work.
-1.  Switch to the new `training` branch.
+1.  Checkout to the `training` branch.
 1.  Install dependencies with `npm install`.
 1.  Open the repository in Atom with `atom .`.
 
