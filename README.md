@@ -16,6 +16,9 @@ By the end of this, developers should be able to:
 -   Evaluate simple JavaScript by inspection
 -   Write simple scripts that use flow control
 
+## Prerequisites
+-   WDI Fundamentals
+
 ## Preparation
 
 1.  Fork and clone this repository.
