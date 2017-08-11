@@ -439,8 +439,7 @@ What results do you get?
 #### String Interpolation
 
 You may have noticed that in `bin/guess.js`, we used the variable `answer` in
-order to display the result of the user's input. The combination of a string and
-previ a variable is called string interpolation. To produce this interpolation is to
+order to display the result of the user's input. The combination of a string and a variable is called string interpolation. To produce this interpolation is to
  write it as such:
 <!-- start code block file="snippets/stringInterpolation1.js" -->
 ```js
