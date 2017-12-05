@@ -432,10 +432,11 @@ Press the UP arrow on your keyboard to reload the previous line and change
 (`enter`).
 
 Now let's look at a more advanced example of conditions and loops `bin/guess.js`
-In your terminal, type `node bin/guess.js Mike`
-Type `Stacey`
-Type `Brian`
-What results do you get?
+1. In your terminal, type `node bin/guess.js`
+1. Type `Stacey`
+1. Type `Brian`
+
+- What results do you get?
 
 #### String Interpolation
 
