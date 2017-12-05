@@ -53,6 +53,7 @@ has only two values and null and undefined each have just one.
 
 The ES2015 primitive type `Symbol` is intentionally omitted.
 
+Run `node bin/primitive-types.js` to see some examples of primitive types in JavaScript.
 ### Literals
 
 Literals represent specific values in the source code.
@@ -244,9 +245,10 @@ i
 ```
 <!-- end code block -->
 
-Note: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
+*Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
 evaluate i, whereas `i++` will evaluate i and then increment.
 
+*Note* We recommend incrementing and decrementing your values by using the `i += 1` or ` i -= 1 ` statements, as it is more expressive and prevents you from pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
 #### String expressions
 
 <!-- start code block file="snippets/strings1.js" -->
@@ -276,7 +278,7 @@ What happens if you don't enter the date as a string?
 
 A boolean expression is a comparison (e.g. `>`, `>=`, `===`) or any value
 interpreted as a boolean.  We'll use that fact when we get to flow control.
-Boolean expression combine using the logical and `&&` and logical `||`
+Boolean expression combine using the logical and `&&` and logical or `||`
 operators.
 
 <!-- start code block file="snippets/boolean1.js" -->
@@ -375,10 +377,10 @@ if (name === 'Brian') {
 <!-- end code block -->
 
 Save this file and return to your terminal.
-Type `node ifStatement.js Brian`
+Type `node bin/ifStatement.js Brian`
 
 Press the UP arrow on your keyboard to reload the previous line and change
-`Brian` to `Lauren` OR type `node ifStatement.js Lauren`. and press `return`
+`Brian` to `Lauren` OR type `node bin/ifStatement.js Lauren`. and press `return`
 (`enter`).
 
 ##### Ternary Operator
@@ -424,21 +426,22 @@ console.log('Outside of the loop, count is ' + count)
 ```
 <!-- end code block -->
 Save this file and return to your terminal.
-Type `node whileLoop.js 1`
+Type `node bin/whileLoop.js 1`
 
 Press the UP arrow on your keyboard to reload the previous line and change
-`1` to `5` OR type `node whileLoop.js 5`. and press `return`
+`1` to `5` OR type `node bin/whileLoop.js 5`. and press `return`
 (`enter`).
 
-Now let's look at a more advanced example of conditions and loops `bin/guess.js`
-In your terminal, type `node bin/guess.js Mike`
-Type `Stacey`
-Type `Brian`
-What results do you get?
+Now let's look at a more advanced example of conditions and loops `bin/guessName.js`
+1. In your terminal, type `node bin/guessName.js`
+1. Type `Stacey`
+1. Type `Brian`
+
+- What results do you get?
 
 #### String Interpolation
 
-You may have noticed that in `bin/guess.js`, we used the variable `answer` in
+You may have noticed that in `bin/guessName.js`, we used the variable `answer` in
 order to display the result of the user's input. The combination of a string and a variable is called string interpolation. To produce this interpolation is to
  write it as such:
 <!-- start code block file="snippets/stringInterpolation1.js" -->
@@ -450,7 +453,7 @@ This method of string interpolation is done using Template Literals.
 Note: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
-Open `forLoop.js` and we'll type some code in...
+Open `bin/forLoop.js` and we'll type some code in...
 <!-- start code block file="snippets/loops1.js" -->
 ```js
 for (let i = 0; i < 10; i++) {
@@ -461,7 +464,7 @@ for (let i = 0; i < 10; i++) {
 
 Save this file and return to your terminal.
 Think about what you expect this file to produce to the terminal...
-Now type `node forLoop.js` and hit ENTER.
+Now type `node bin/forLoop.js` and hit ENTER.
 
 which is _almost_ equivalent to:
 <!-- start code block file="snippets/loops2.js" -->
