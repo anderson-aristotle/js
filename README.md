@@ -276,7 +276,7 @@ What happens if you don't enter the date as a string?
 
 A boolean expression is a comparison (e.g. `>`, `>=`, `===`) or any value
 interpreted as a boolean.  We'll use that fact when we get to flow control.
-Boolean expression combine using the logical and `&&` and logical `||`
+Boolean expression combine using the logical and `&&` and logical or `||`
 operators.
 
 <!-- start code block file="snippets/boolean1.js" -->
