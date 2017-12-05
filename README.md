@@ -244,9 +244,10 @@ i
 ```
 <!-- end code block -->
 
-Note: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
+*Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
 evaluate i, whereas `i++` will evaluate i and then increment.
 
+*Note* We recommend incrementing and decrementing your values by using the `i += 1` or ` i -= 1 ` statements, as it is more expressive and prevents you from pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
 #### String expressions
 
 <!-- start code block file="snippets/strings1.js" -->
