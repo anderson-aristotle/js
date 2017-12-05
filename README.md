@@ -376,10 +376,10 @@ if (name === 'Brian') {
 <!-- end code block -->
 
 Save this file and return to your terminal.
-Type `node ifStatement.js Brian`
+Type `node bin/ifStatement.js Brian`
 
 Press the UP arrow on your keyboard to reload the previous line and change
-`Brian` to `Lauren` OR type `node ifStatement.js Lauren`. and press `return`
+`Brian` to `Lauren` OR type `node bin/ifStatement.js Lauren`. and press `return`
 (`enter`).
 
 ##### Ternary Operator
@@ -425,10 +425,10 @@ console.log('Outside of the loop, count is ' + count)
 ```
 <!-- end code block -->
 Save this file and return to your terminal.
-Type `node whileLoop.js 1`
+Type `node bin/whileLoop.js 1`
 
 Press the UP arrow on your keyboard to reload the previous line and change
-`1` to `5` OR type `node whileLoop.js 5`. and press `return`
+`1` to `5` OR type `node bin/whileLoop.js 5`. and press `return`
 (`enter`).
 
 Now let's look at a more advanced example of conditions and loops `bin/guess.js`
@@ -451,7 +451,7 @@ This method of string interpolation is done using Template Literals.
 Note: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
-Open `forLoop.js` and we'll type some code in...
+Open `bin/forLoop.js` and we'll type some code in...
 <!-- start code block file="snippets/loops1.js" -->
 ```js
 for (let i = 0; i < 10; i++) {
@@ -462,7 +462,7 @@ for (let i = 0; i < 10; i++) {
 
 Save this file and return to your terminal.
 Think about what you expect this file to produce to the terminal...
-Now type `node forLoop.js` and hit ENTER.
+Now type `node bin/forLoop.js` and hit ENTER.
 
 which is _almost_ equivalent to:
 <!-- start code block file="snippets/loops2.js" -->
