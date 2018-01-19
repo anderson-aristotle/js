@@ -28,7 +28,7 @@ By the end of this, developers should be able to:
 1.  Install dependencies with `npm install`.
 1.  Open the repository in Atom with `atom .`.
 
-Note: Create and switch to a new branch at the same time with the shortcut:
+*Note*: Create and switch to a new branch at the same time with the shortcut:
 `git checkout -b <new branch name>`.
 
 ## Basics
@@ -106,7 +106,18 @@ declared but are uninitialized or unset have the value `undefined`.
 ### Operators
 
 Operators come in three classes, unary, binary (the most common), and ternary
-(there is only one).
+(there is only one). These operators act on 1, 2, and 3 operands, respectively.
+
+<!-- start code block file="snippets/operatorExamples.js" -->
+```js
+// unary:
+!true
+// binary:
+4 + 5
+// ternary
+isVegetarian ? 'no meat for you' : 'eats meat'
+```
+<!-- end code block -->
 
 Operator precedence determines the order in which operators are evaluated.
 Operators with higher precedence are evaluated first.
@@ -144,6 +155,14 @@ operators.
 
 An expression with all of the variables replaced with literals that are equal to
 the values of the variables will produce the same result.
+
+#### Piece on let and const vs. var
+
+Prior to ES6 javascript had one way of declaring variables: `var`. Now there
+are much better ways to declare variables: `let` and `const`. The basic rule of
+thumb should be to use `const` when you don't need to reassign that variable,
+and `let` when you do. You will continue to see `var` in legacy code bases and
+documentation online, but you shouldn't use in your own code.
 
 #### Code Along: Assignment expressions
 
@@ -246,9 +265,12 @@ i
 <!-- end code block -->
 
 *Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
+*Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
 evaluate i, whereas `i++` will evaluate i and then increment.
 
 *Note* We recommend incrementing and decrementing your values by using the `i += 1` or ` i -= 1 ` statements, as it is more expressive and prevents you from pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
+*Note* We recommend incrementing and decrementing your values by using the `i += 1` or ` i -= 1 ` statements, as it is more expressive and prevents you from pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
+
 #### String expressions
 
 <!-- start code block file="snippets/strings1.js" -->
@@ -293,7 +315,7 @@ height > 72 && height < 78
 <!-- end code block -->
 
 The logical operators 'short circuit', which means they stop evaluating operands
-as soon as the expression is `false` for `&&`, or true for `||`.
+as soon as the expression is `false` for `&&`, or `true` for `||`.
 
 ##### Truthy and Falsy Values
 
@@ -308,7 +330,8 @@ All values in JS are inherently truthy with the exception of these 6 values:
 -   `NaN`
 -   `''`, `""`, and ` `` `
 
-Note:  The negation of a truthy value is `false` and the negation of a falsy
+*Note*:  The negation of a truthy value is `false` and the negation of a falsy
+*Note*:  The negation of a truthy value is `false` and the negation of a falsy
 value is `true`.
 
 <!-- start code block file="snippets/boolean2.js" -->
@@ -330,11 +353,11 @@ the other operator to a string.  Some results of this conversion are more useful
 than others.
 
 Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
+Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 
-The unary `!` operator converts its operand to a boolean value.
-
-For non-strict-equality comparisons with numbers, boolean values are coerced to
-`1` or `0` (from `true` or `false` respectively).
+`!` is the logical NOT operator. It always returns a boolean whose value is the
+opposite of its operand. If its single operand is truthy, it returns false;
+otherwise, it returns true.
 
 ### Code Along: Flow Control
 
@@ -342,7 +365,12 @@ Remember how we used node as a REPL earlier? It actually has a completely
 different use as well--as a script runner. Let's see how that works while we
 explore some examples of flow control.
 
-To exit your REPL, use CTRL-d or type `.exit` and let's write some code in actual files.
+To exit your REPL, use CTRL-d or type `.exit` and let's write some code in
+actual files.
+
+*Note*: Get in the habit of running and creating scripts from the root of your
+directory. For example, run `node bin/ifStatement.js` instead of `cd bin/` and
+then running `node ifStatement.js`
 
 #### Printing to the Console
 
@@ -450,7 +478,8 @@ console.log(`Sorry, your guess '${answer}', isn't correct.`)
 ```
 <!-- end code block -->
 This method of string interpolation is done using Template Literals.
-Note: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+*Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+*Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
 Open `bin/forLoop.js` and we'll type some code in...
@@ -505,7 +534,7 @@ If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
 Save it in `bin/bonusChallenge.js`
 
-Note: refer to the beginning lines of our `bin/ifStatement.js` code to enable
+*Note*: refer to the beginning lines of our `bin/ifStatement.js` code to enable
 working with user input.
 
 ## Additional Resources
