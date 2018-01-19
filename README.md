@@ -293,7 +293,7 @@ height > 72 && height < 78
 <!-- end code block -->
 
 The logical operators 'short circuit', which means they stop evaluating operands
-as soon as the expression is `false` for `&&`, or true for `||`.
+as soon as the expression is `false` for `&&`, or `true` for `||`.
 
 ##### Truthy and Falsy Values
 
