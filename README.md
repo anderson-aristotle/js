@@ -350,10 +350,9 @@ than others.
 
 Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 
-The unary `!` operator converts its operand to a boolean value.
-
-For non-strict-equality comparisons with numbers, boolean values are coerced to
-`1` or `0` (from `true` or `false` respectively).
+`!` is the logical NOT operator. It always returns a boolean whose value is the
+opposite of its operand. If its single operand is truthy, it returns false;
+otherwise, it returns true.
 
 ### Code Along: Flow Control
 
