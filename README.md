@@ -145,6 +145,14 @@ operators.
 An expression with all of the variables replaced with literals that are equal to
 the values of the variables will produce the same result.
 
+#### Piece on let and const vs. var
+
+Prior to ES6 javascript had one way of declaring variables: `var`. Now there
+are much better ways to declare variables: `let` and `const`. The basic rule of
+thumb should be to use `const` when you don't need to reassign that variable,
+and `let` when you do. You will continue to see `var` in legacy code bases and
+documentation online, but you shouldn't use in your own code.
+
 #### Code Along: Assignment expressions
 
 Assignment changes the value of a variable.
