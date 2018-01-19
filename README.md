@@ -109,7 +109,14 @@ Operators come in three classes, unary, binary (the most common), and ternary
 (there is only one). These operators act on 1, 2, and 3 operands, respectively.
 
 <!-- start code block file="snippets/operatorExamples.js" -->
-
+```js
+// unary:
+!true
+// binary:
+4 + 5
+// ternary
+isVegetarian ? 'no meat for you' : 'eats meat'
+```
 <!-- end code block -->
 
 Operator precedence determines the order in which operators are evaluated.
