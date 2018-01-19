@@ -106,7 +106,11 @@ declared but are uninitialized or unset have the value `undefined`.
 ### Operators
 
 Operators come in three classes, unary, binary (the most common), and ternary
-(there is only one).
+(there is only one). These operators act on 1, 2, and 3 operands, respectively.
+
+<!-- start code block file="snippets/operatorExamples.js" -->
+
+<!-- end code block -->
 
 Operator precedence determines the order in which operators are evaluated.
 Operators with higher precedence are evaluated first.
