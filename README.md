@@ -10,11 +10,11 @@ A review of many of the building blocks of JavaScript.
 
 By the end of this, developers should be able to:
 
-- List all 5 JavaScript primitives and give an example of each
-- Identify the operator in an expression and explain what it does
-- Define variable and contrast with value
-- Evaluate simple JavaScript by inspection
-- Write simple scripts that use flow control
+- List all 5 JavaScript primitives and give an example of each.
+- Identify the operator in an expression and explain what it does.
+- Define variable and contrast with value.
+- Evaluate simple JavaScript by inspection.
+- Write simple scripts that use flow control.
 
 ## Prerequisites
 
