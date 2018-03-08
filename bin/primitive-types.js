@@ -1,5 +1,3 @@
-'use strict'
-
 const aNumber = 1
 
 const aString = 'this is a string'
@@ -10,12 +8,12 @@ const theNull = null
 
 let theUndefined
 
-console.log(`aNumber - value:"${aNumber}"; type:${typeof aNumber}`)
+console.log(`the variable "aNumber" contains the value ${aNumber}, it is of type ${typeof aNumber}`)
 
-console.log(`aString, value:"${aString}"; type:${typeof aString}`)
+console.log(`the variable "aString" contains the value "${aString}", it is of type ${typeof aString}`)
 
-console.log(`aBoolean, value:"${aBoolean}"; type:${typeof aBoolean}`)
+console.log(`the variable "aBoolean" contains the value ${aBoolean}, it is of type ${typeof aBoolean}`)
 
-console.log(`theNull, value:"${theNull}"; type:${typeof theNull}`)
+console.log(`the variable "theNull" contrains the value ${theNull}, it is of type ${typeof theNull}`)
 
-console.log(`theUndefined, value:"${theUndefined}"; type:${typeof theUndefined}`)
+console.log(`the variable "theUndefined" contains the value ${theUndefined}, it is of type ${typeof theUndefined}`)

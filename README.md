@@ -36,7 +36,7 @@ By the end of this, developers should be able to:
 
 ### Primitive types
 
-ES5 has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures): `Number`, `String`, `Boolean`, `null`, and `undefined`.
+JavaScript has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures): `Number`, `String`, `Boolean`, `null`, and `undefined`.
 
 | Type      | Examples                        |
 |:----------|:--------------------------------|
@@ -84,13 +84,9 @@ $ node
 >
 ```
 
-The first line we will run in our Node.js REPL is to `use strict`
+Variables need to be declared.
 
-<!-- start code block file="snippets/declareVariables1.js" -->
-```js
-'use strict'
-```
-<!-- end code block -->
+#### Piece on let and const vs. var
 
 Prior to ES6 JavaScript had one way of declaring variables: `var`. Now there
 are much better ways to declare variables: `let` and `const`. The basic rule of
@@ -149,7 +145,7 @@ from higher to lower precedence.
 | relation, instance                                   | left-to-right | `<` `<=` `>` `>=` `instanceof` |
 | strict equality                                      | left-to-right | `===` `!==`                    |
 | logical and                                          | left-to-right | `&&`                           |
-| logical or                                           | left-to-right | &#124;&#124;                   |
+| logical or                                           | left-to-right | `||`                           |
 | conditional                                          | right-to-left | `?:`                           |
 | assignment                                           | right-to-left | `=` `+=` `-=` `*=` `/=` `%=`   |
 
@@ -215,9 +211,9 @@ const variableOne
 <!-- start code block file="snippets/constants2.js" -->
 ```js
 const pi = 3.14159265359 // rounded
-pi
+console.log(pi)
 const e = 2.71828182846 // rounded
-e
+console.log(e)
 ```
 <!-- end code block -->
 
@@ -384,7 +380,6 @@ Open `bin/ifStatement.js` and we'll type some code in...
 
 <!-- start code block file="snippets/conditionals1.js" -->
 ```js
-'use strict'
 // We'll learn about process.argv later in the course
 const name = process.argv[2]
 if (name === 'Brian') {
@@ -460,18 +455,12 @@ Press the UP arrow on your keyboard to reload the previous line and change
 `1` to `5` OR type `node bin/whileLoop.js 5`. and press `return`
 (`enter`).
 
-Now let's look at a more advanced example of conditions and loops `bin/guessName.js`
-1. In your terminal, type `node bin/guessName.js`
-1. Type `Stacey`
-1. Type `Brian`
-
-- What results do you get?
-
 #### String Interpolation
 
-You may have noticed that in `bin/guessName.js`, we used the variable `answer` in
-order to display the result of the user's input. The combination of a string and a variable is called string interpolation. To produce this interpolation is to
- write it as such:
+Take a look at `bin/guessName.js`, you may have noticed that we used the
+variable `answer` in order to display the result of the user's input. The
+combination of a string and a variable is called string interpolation. The
+syntax for it looks like this:
 
 <!-- start code block file="snippets/stringInterpolation1.js" -->
 ```js
@@ -480,7 +469,6 @@ console.log(`Sorry, your guess '${answer}', isn't correct.`)
 <!-- end code block -->
 
 This method of string interpolation is done using Template Literals.
-*Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 *Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
@@ -498,7 +486,7 @@ Save this file and return to your terminal.
 Think about what you expect this file to produce to the terminal...
 Now type `node bin/forLoop.js` and hit ENTER.
 
-which is _almost_ equivalent to:
+That for loop was _almost_ equivalent to:
 
 <!-- start code block file="snippets/loops2.js" -->
 ```js

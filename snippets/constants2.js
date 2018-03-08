@@ -1,4 +1,4 @@
 const pi = 3.14159265359 // rounded
-pi
+console.log(pi)
 const e = 2.71828182846 // rounded
-e
+console.log(e)

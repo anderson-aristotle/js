@@ -1,5 +1,3 @@
-'use strict'
-
 let count = process.argv[2]
 
 while (count < 5) {
