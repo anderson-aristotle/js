@@ -92,7 +92,11 @@ The first line we will run in our Node.js REPL is to `use strict`
 ```
 <!-- end code block -->
 
-Variables need to be declared.
+Prior to ES6 JavaScript had one way of declaring variables: `var`. Now there
+are much better ways to declare variables: `let` and `const`. The basic rule of
+thumb should be to use `const` when you don't need to reassign that variable,
+and `let` when you do. You will continue to see `var` in legacy code bases and
+documentation online, but you shouldn't use in your own code.
 
 <!-- start code block file="snippets/declareVariables2.js" -->
 ```js
@@ -161,14 +165,6 @@ operators.
 
 An expression with all of the variables replaced with literals that are equal to
 the values of the variables will produce the same result.
-
-#### Piece on let and const vs. var
-
-Prior to ES6 javascript had one way of declaring variables: `var`. Now there
-are much better ways to declare variables: `let` and `const`. The basic rule of
-thumb should be to use `const` when you don't need to reassign that variable,
-and `let` when you do. You will continue to see `var` in legacy code bases and
-documentation online, but you shouldn't use in your own code.
 
 #### Code Along: Assignment expressions
 
