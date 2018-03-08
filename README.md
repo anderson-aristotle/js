@@ -267,13 +267,7 @@ i
 <!-- end code block -->
 
 *Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
-*Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
 evaluate i, whereas `i++` will evaluate i and then increment.
-
-*Note* We recommend incrementing and decrementing your values by using the `i += 1` or `i -= 1` statements, as it is more expressive and prevents you from
-pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
-*Note* We recommend incrementing and decrementing your values by using the `i += 1` or `i -= 1` statements, as it is more expressive and prevents you from
-pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
 
 #### String expressions
 
@@ -334,7 +328,6 @@ All values in JS are inherently truthy with the exception of these 6 values:
 - `''`, `""`, and ` `` `
 
 *Note*:  The negation of a truthy value is `false` and the negation of a falsy
-*Note*:  The negation of a truthy value is `false` and the negation of a falsy
 value is `true`.
 
 <!-- start code block file="snippets/boolean2.js" -->
@@ -355,7 +348,6 @@ If either operand of the binary `+` operator is a string the operator converts
 the other operator to a string.  Some results of this conversion are more useful
 than others.
 
-Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 
 `!` is the logical NOT operator. It always returns a boolean whose value is the
