@@ -518,9 +518,10 @@ What do we type in the terminal to run our code?
 
 Try building your own script in the file titled `bin/guessAge.js`. Have
 this script accept an age argument, and if they're older than 90 print to the
-console "You old fart!" If they're under the age of 10 print "Why are you on a
-computer? Go outside!" If they're between 10 and 90, print "How boring...".
-You should be able to run the file like `node bin/guessAge.js 100`.
+console "What a rich life you have led!" If they're under the age of 10 print
+"You should be playing outside!" If they're between 10 and 90, print
+"I should have made this age range smaller!". You should be able to run the
+file like `node bin/guessAge.js 100`.
 
 If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
