@@ -54,7 +54,7 @@ has only two values and null and undefined each have just one.
 
 The ES2015 primitive type `Symbol` is intentionally omitted.
 
-Run `node bin/primitive-types.js` to see some examples of primitive types in
+Run `node bin/primitiveTypes.js` to see some examples of primitive types in
 JavaScript.
 
 ### Literals
