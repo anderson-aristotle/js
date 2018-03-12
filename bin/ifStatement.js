@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-'use strict'
-
 // We'll learn about process.argv later in the course
 const name = process.argv[2] || ''
+
+console.log(name)
 
 // Write a program that asks a user what their name is
 

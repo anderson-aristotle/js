@@ -10,23 +10,24 @@ A review of many of the building blocks of JavaScript.
 
 By the end of this, developers should be able to:
 
--   List all 5 JavaScript primitives and give an example of each
--   Identify the operator in an expression and explain what it does
--   Define variable and contrast with value
--   Evaluate simple JavaScript by inspection
--   Write simple scripts that use flow control
+- List all 5 JavaScript primitives and give an example of each.
+- Identify the operator in an expression and explain what it does.
+- Define variable and contrast with value.
+- Evaluate simple JavaScript by inspection.
+- Write simple scripts that use flow control.
 
 ## Prerequisites
--   WDI Fundamentals
+
+- WDI Fundamentals
 
 ## Preparation
 
-1.  Fork and clone this repository.
- [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-1.  Create a new branch, `training`, for your work.
-1.  Checkout to the `training` branch.
-1.  Install dependencies with `npm install`.
-1.  Open the repository in Atom with `atom .`.
+1. Fork and clone this repository.
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. Create a new branch, `training`, for your work.
+1. Checkout to the `training` branch.
+1. Install dependencies with `npm install`.
+1. Open the repository in Atom with `atom .`.
 
 *Note*: Create and switch to a new branch at the same time with the shortcut:
 `git checkout -b <new branch name>`.
@@ -35,7 +36,7 @@ By the end of this, developers should be able to:
 
 ### Primitive types
 
-ES5 has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures): `Number`, `String`, `Boolean`, `null`, and `undefined`.
+JavaScript has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures): `Number`, `String`, `Boolean`, `null`, and `undefined`.
 
 | Type      | Examples                        |
 |:----------|:--------------------------------|
@@ -53,7 +54,9 @@ has only two values and null and undefined each have just one.
 
 The ES2015 primitive type `Symbol` is intentionally omitted.
 
-Run `node bin/primitive-types.js` to see some examples of primitive types in JavaScript.
+Run `node bin/primitiveTypes.js` to see some examples of primitive types in
+JavaScript.
+
 ### Literals
 
 Literals represent specific values in the source code.
@@ -66,28 +69,31 @@ Some examples are `1`, `'A string'`, `null`.
 We'll use Node.js as a [REPL](https://nodejs.org/api/repl.html) and script
 runner to evaluate expressions and explore JavaScript features.
 
--   **R**ead
--   **E**valuate
--   **P**rint
--   **L**oop
+- **R**ead
+- **E**valuate
+- **P**rint
+- **L**oop
 
 #### Code Along: Declare Variables
 
 Type `node` into your terminal to start the Node.js program REPL.
 The `>` symbol tells us we are now interacting with the Node.js REPL
+
 ```bash
 $ node
 >
 ```
 
-The first line we will run in our Node.js REPL is to `use strict`
-<!-- start code block file="snippets/declareVariables1.js" -->
-```js
-'use strict'
-```
-<!-- end code block -->
-
 Variables need to be declared.
+
+#### Piece on let and const vs. var
+
+Prior to ES6 JavaScript had one way of declaring variables: `var`. Now there
+are much better ways to declare variables: `let` and `const`. The basic rule of
+thumb should be to use `const` when you don't need to reassign that variable,
+and `let` when you do. You will continue to see `var` in legacy code bases and
+documentation online, but you shouldn't use in your own code.
+
 <!-- start code block file="snippets/declareVariables2.js" -->
 ```js
 const bornOn = '1982-09-29'
@@ -139,7 +145,7 @@ from higher to lower precedence.
 | relation, instance                                   | left-to-right | `<` `<=` `>` `>=` `instanceof` |
 | strict equality                                      | left-to-right | `===` `!==`                    |
 | logical and                                          | left-to-right | `&&`                           |
-| logical or                                           | left-to-right | &#124;&#124;                   |
+| logical or                                           | left-to-right | `||`                           |
 | conditional                                          | right-to-left | `?:`                           |
 | assignment                                           | right-to-left | `=` `+=` `-=` `*=` `/=` `%=`   |
 
@@ -155,14 +161,6 @@ operators.
 
 An expression with all of the variables replaced with literals that are equal to
 the values of the variables will produce the same result.
-
-#### Piece on let and const vs. var
-
-Prior to ES6 javascript had one way of declaring variables: `var`. Now there
-are much better ways to declare variables: `let` and `const`. The basic rule of
-thumb should be to use `const` when you don't need to reassign that variable,
-and `let` when you do. You will continue to see `var` in legacy code bases and
-documentation online, but you shouldn't use in your own code.
 
 #### Code Along: Assignment expressions
 
@@ -213,9 +211,9 @@ const variableOne
 <!-- start code block file="snippets/constants2.js" -->
 ```js
 const pi = 3.14159265359 // rounded
-pi
+console.log(pi)
 const e = 2.71828182846 // rounded
-e
+console.log(e)
 ```
 <!-- end code block -->
 
@@ -265,11 +263,7 @@ i
 <!-- end code block -->
 
 *Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
-*Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
 evaluate i, whereas `i++` will evaluate i and then increment.
-
-*Note* We recommend incrementing and decrementing your values by using the `i += 1` or ` i -= 1 ` statements, as it is more expressive and prevents you from pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
-*Note* We recommend incrementing and decrementing your values by using the `i += 1` or ` i -= 1 ` statements, as it is more expressive and prevents you from pre-incrementing/pre-decrementing values unintentionally which could cause bugs.
 
 #### String expressions
 
@@ -294,7 +288,6 @@ console.log(bornOn)
 <!-- end code block -->
 
 What happens if you don't enter the date as a string?
-
 
 #### Code Along: Boolean expressions
 
@@ -323,14 +316,13 @@ What do you think of when you hear 'truthy' and 'falsy'?
 
 All values in JS are inherently truthy with the exception of these 6 values:
 
--   `false`
--   `undefined`
--   `null`
--   `0` and `-0`
--   `NaN`
--   `''`, `""`, and ` `` `
+- `false`
+- `undefined`
+- `null`
+- `0` and `-0`
+- `NaN`
+- `''`, `""`, and ` `` `
 
-*Note*:  The negation of a truthy value is `false` and the negation of a falsy
 *Note*:  The negation of a truthy value is `false` and the negation of a falsy
 value is `true`.
 
@@ -352,7 +344,6 @@ If either operand of the binary `+` operator is a string the operator converts
 the other operator to a string.  Some results of this conversion are more useful
 than others.
 
-Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 
 `!` is the logical NOT operator. It always returns a boolean whose value is the
@@ -389,7 +380,6 @@ Open `bin/ifStatement.js` and we'll type some code in...
 
 <!-- start code block file="snippets/conditionals1.js" -->
 ```js
-'use strict'
 // We'll learn about process.argv later in the course
 const name = process.argv[2]
 if (name === 'Brian') {
@@ -414,12 +404,14 @@ Press the UP arrow on your keyboard to reload the previous line and change
 ##### Ternary Operator
 Ternary operators are basically a shorthand way of writing `if else` statements.
 An example of a ternary operator can be found below:
+
 <!-- start code block file="snippets/ternaryOperator1.js" -->
 ```js
 const height = 72
 height >= 72 ? console.log('You can Ride') : console.log('Tea Cups Only')
 ```
 <!-- end code block -->
+
 This example might look a little bit confusing, but it is relatively simple if
 we break it down: First, the statement before the question mark is evaluated as
 being either `true` or `false`. If the statement is `true`, then the statement
@@ -428,6 +420,7 @@ right of the colon is executed.
 
 #### `while` Loops
 A simple while loop that logs from 0 - 9
+
 <!-- start code block file="snippets/loops2.js" -->
 ```js
 let i = 0
@@ -439,6 +432,7 @@ while (i < 10) {
 <!-- end code block -->
 
 Open `bin/whileLoop.js` and we'll type some code in...
+
 <!-- start code block file="snippets/conditionals2.js" -->
 ```js
 'use strict'
@@ -453,6 +447,7 @@ while (count < 5) {
 console.log('Outside of the loop, count is ' + count)
 ```
 <!-- end code block -->
+
 Save this file and return to your terminal.
 Type `node bin/whileLoop.js 1`
 
@@ -460,29 +455,25 @@ Press the UP arrow on your keyboard to reload the previous line and change
 `1` to `5` OR type `node bin/whileLoop.js 5`. and press `return`
 (`enter`).
 
-Now let's look at a more advanced example of conditions and loops `bin/guessName.js`
-1. In your terminal, type `node bin/guessName.js`
-1. Type `Stacey`
-1. Type `Brian`
-
-- What results do you get?
-
 #### String Interpolation
 
-You may have noticed that in `bin/guessName.js`, we used the variable `answer` in
-order to display the result of the user's input. The combination of a string and a variable is called string interpolation. To produce this interpolation is to
- write it as such:
+Take a look at `bin/guessName.js`, you may have noticed that we used the
+variable `answer` in order to display the result of the user's input. The
+combination of a string and a variable is called string interpolation. The
+syntax for it looks like this:
+
 <!-- start code block file="snippets/stringInterpolation1.js" -->
 ```js
 console.log(`Sorry, your guess '${answer}', isn't correct.`)
 ```
 <!-- end code block -->
+
 This method of string interpolation is done using Template Literals.
-*Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 *Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
 Open `bin/forLoop.js` and we'll type some code in...
+
 <!-- start code block file="snippets/loops1.js" -->
 ```js
 for (let i = 0; i < 10; i++) {
@@ -495,7 +486,8 @@ Save this file and return to your terminal.
 Think about what you expect this file to produce to the terminal...
 Now type `node bin/forLoop.js` and hit ENTER.
 
-which is _almost_ equivalent to:
+That for loop was _almost_ equivalent to:
+
 <!-- start code block file="snippets/loops2.js" -->
 ```js
 let i = 0
@@ -526,9 +518,10 @@ What do we type in the terminal to run our code?
 
 Try building your own script in the file titled `bin/guessAge.js`. Have
 this script accept an age argument, and if they're older than 90 print to the
-console "You old fart!" If they're under the age of 10 print "Why are you on a
-computer? Go outside!" If they're between 10 and 90, print "How boring...".
-You should be able to run the file like `node bin/guessAge.js 100`.
+console "What a rich life you have led!" If they're under the age of 10 print
+"You should be playing outside!" If they're between 10 and 90, print
+"I should have made this age range smaller!". You should be able to run the
+file like `node bin/guessAge.js 100`.
 
 If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
@@ -542,15 +535,15 @@ working with user input.
 See the following sections at
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide>
 
--   Grammar and types
--   Control flow and error handling
--   Loops and iteration
--   Expressions and operators
--   Number and [dates](https://en.wikipedia.org/wiki/ISO_8601)
--   Text formatting
+- Grammar and types
+- Control flow and error handling
+- Loops and iteration
+- Expressions and operators
+- Number and [dates](https://en.wikipedia.org/wiki/ISO_8601)
+- Text formatting
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
