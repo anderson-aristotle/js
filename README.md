@@ -40,8 +40,8 @@ JavaScript has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/
 
 | Type      | Examples                        |
 |:----------|:--------------------------------|
-| Number    | `-0`, `NaN`, `Infinity`         |
-| String    | `''`, `"The non-empty string."` |
+| Number    | `1`, `42`, `-3` `1.04`, `NaN`, `Infinity`         |
+| String    | `'a simple string'`, `"Hi, my name is Chris."`, or empty strings: `''`, `""` |
 | Boolean   | `true`, `false`                 |
 | null      | `null`                          |
 | undefined | `undefined`                     |
