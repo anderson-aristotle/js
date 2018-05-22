@@ -140,12 +140,12 @@ from higher to lower precedence.
 | grouping                                             | n/a           | `()`                           |
 | postfix increment                                    | n/a           | `++` `--`                      |
 | negation, numeric conversion, prefix increment, type | right-to-left | `!` `-` `+` `++` `--` `typeof` |
-| multiplication, division, modulo                     | left-to-right | `* / %`                        |
-| addition, subtraction                                | left-to-right | `+ -`                          |
+| multiplication, division, modulo                     | left-to-right | `*` `/` `%`                        |
+| addition, subtraction                                | left-to-right | `+` `-`                          |
 | relation, instance                                   | left-to-right | `<` `<=` `>` `>=` `instanceof` |
 | strict equality                                      | left-to-right | `===` `!==`                    |
 | logical and                                          | left-to-right | `&&`                           |
-| logical or                                           | left-to-right | `||`                           |
+| logical or                                           | left-to-right | &#124;&#124;                          |
 | conditional                                          | right-to-left | `?:`                           |
 | assignment                                           | right-to-left | `=` `+=` `-=` `*=` `/=` `%=`   |
 
