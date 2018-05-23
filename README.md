@@ -40,8 +40,8 @@ JavaScript has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/
 
 | Type      | Examples                        |
 |:----------|:--------------------------------|
-| Number    | `-0`, `NaN`, `Infinity`         |
-| String    | `''`, `"The non-empty string."` |
+| Number    | `1`, `42`, `-3` `1.04`, `NaN`, `Infinity`         |
+| String    | `'a simple string'`, `"Hi, my name is Chris."`, or empty strings: `''`, `""` |
 | Boolean   | `true`, `false`                 |
 | null      | `null`                          |
 | undefined | `undefined`                     |
@@ -140,12 +140,12 @@ from higher to lower precedence.
 | grouping                                             | n/a           | `()`                           |
 | postfix increment                                    | n/a           | `++` `--`                      |
 | negation, numeric conversion, prefix increment, type | right-to-left | `!` `-` `+` `++` `--` `typeof` |
-| multiplication, division, modulo                     | left-to-right | `* / %`                        |
-| addition, subtraction                                | left-to-right | `+ -`                          |
+| multiplication, division, modulo                     | left-to-right | `*` `/` `%`                        |
+| addition, subtraction                                | left-to-right | `+` `-`                          |
 | relation, instance                                   | left-to-right | `<` `<=` `>` `>=` `instanceof` |
 | strict equality                                      | left-to-right | `===` `!==`                    |
 | logical and                                          | left-to-right | `&&`                           |
-| logical or                                           | left-to-right | `||`                           |
+| logical or                                           | left-to-right | &#124;&#124;                          |
 | conditional                                          | right-to-left | `?:`                           |
 | assignment                                           | right-to-left | `=` `+=` `-=` `*=` `/=` `%=`   |
 
