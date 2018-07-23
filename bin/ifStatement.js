@@ -1,5 +1,4 @@
-// We'll learn about process.argv later in the course
-const name = process.argv[2] || ''
+let name
 
 console.log(name)
 

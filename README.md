@@ -353,8 +353,7 @@ a good point of reference for debugging.
 Open `bin/ifStatement.js` and we'll type some code in...
 
 ```js
-// We'll learn about process.argv later in the course
-const name = process.argv[2]
+let name
 if (name === 'Brian') {
   console.log('Hi, Brian!')
 } else if (name === 'Jeff') {
@@ -404,9 +403,7 @@ while (i < 10) {
 Open `bin/whileLoop.js` and we'll type some code in...
 
 ```js
-'use strict'
-
-let count = process.argv[2]
+let count = 1
 
 while (count < 5) {
   console.log('Inside of the loop, count is ' + count)
@@ -417,11 +414,10 @@ console.log('Outside of the loop, count is ' + count)
 ```
 
 Save this file and return to your terminal.
-Type `node bin/whileLoop.js 1`
+Type `node bin/whileLoop.js`
 
-Press the UP arrow on your keyboard to reload the previous line and change
-`1` to `5` OR type `node bin/whileLoop.js 5`. and press `return`
-(`enter`).
+What if we change the value of `count`? Let's change the script so that we make
+`count = 5` and then we can run the script again to see what changed.
 
 #### String Interpolation
 
@@ -479,18 +475,22 @@ What do we type in the terminal to run our code?
 #### Lab: Build a Script Yourself
 
 Try building your own script in the file titled `bin/guessAge.js`. Have
-this script accept an age argument, and if they're older than 90 print to the
-console "What a rich life you have led!" If they're under the age of 10 print
-"You should be playing outside!" If they're between 10 and 90, print
-"I should have made this age range smaller!". You should be able to run the
-file like `node bin/guessAge.js 100`.
+this script start with an age variable. Then with an if statement display
+something different depending on the age.
+
+If they're older than 90 print to the console "What a rich life you have led!"
+
+If they're under the age of 10 print "You should be playing outside!"
+
+If they're between 10 and 90, print "I should have made this age range
+smaller!". You should be able to run the file like `node bin/guessAge.js`.
+
+Change the value of the `age` variable to make sure your if statement can print
+all three sentences.
 
 If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
 Save it in `bin/bonusChallenge.js`
-
-*Note*: refer to the beginning lines of our `bin/ifStatement.js` code to enable
-working with user input.
 
 ## Additional Resources
 
