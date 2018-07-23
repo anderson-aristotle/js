@@ -495,14 +495,14 @@ working with user input.
 ## Additional Resources
 
 See the following sections at
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide>
+[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 
-- Grammar and types
-- Control flow and error handling
-- Loops and iteration
-- Expressions and operators
-- Number and [dates](https://en.wikipedia.org/wiki/ISO_8601)
-- Text formatting
+- [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Number and dates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [Text formatting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 
 ## [License](LICENSE)
 
