@@ -94,12 +94,10 @@ thumb should be to use `const` when you don't need to reassign that variable,
 and `let` when you do. You will continue to see `var` in legacy code bases and
 documentation online, but you shouldn't use in your own code.
 
-<!-- start code block file="snippets/declareVariables2.js" -->
 ```js
 const bornOn = '1982-09-29'
 console.log(bornOn)
 ```
-<!-- end code block -->
 
 Variables name storage for the value they contain.  Because JavaScript is a
 dynamically typed language, you can assign a value of one type to a variable and
@@ -114,7 +112,6 @@ declared but are uninitialized or unset have the value `undefined`.
 Operators come in three classes, unary, binary (the most common), and ternary
 (there is only one). These operators act on 1, 2, and 3 operands, respectively.
 
-<!-- start code block file="snippets/operatorExamples.js" -->
 ```js
 // unary:
 !true
@@ -123,7 +120,6 @@ Operators come in three classes, unary, binary (the most common), and ternary
 // ternary
 isVegetarian ? 'no meat for you' : 'eats meat'
 ```
-<!-- end code block -->
 
 Operator precedence determines the order in which operators are evaluated.
 Operators with higher precedence are evaluated first.
@@ -166,7 +162,6 @@ the values of the variables will produce the same result.
 
 Assignment changes the value of a variable.
 
-<!-- start code block file="snippets/assignVariables1.js" -->
 ```js
 let name
 console.log(name)
@@ -175,18 +170,15 @@ console.log(name)
 name = 'Sarah'
 console.log(name)
 ```
-<!-- end code block -->
 
 Remember: JavaScript variables are untyped.
 
-<!-- start code block file="snippets/assignVariables2.js" -->
 ```js
 let name
 name = 'Brian'
 name = 29
 console.log(name + 1)
 ```
-<!-- end code block -->
 
 Although it doesn't cause an error, avoid confusing code like the above.
 
@@ -196,42 +188,35 @@ sitting next to you in it. Now change it to someone else in the room!
 
 ##### Constants
 
-Constants must be initialized, assigned a value, when created.  Uninitialized
+Constants must be initialized, assigned a value, when created. Uninitialized
 constants are a syntax error.
 
-<!-- start code block file="snippets/constants1.js" -->
 ```js
 const variableOne
 // const variableOne
 //      ^^^^^^^^^^^^^
 // SyntaxError: Missing initializer in const declaration
 ```
-<!-- end code block -->
 
-<!-- start code block file="snippets/constants2.js" -->
 ```js
 const pi = 3.14159265359 // rounded
 console.log(pi)
 const e = 2.71828182846 // rounded
 console.log(e)
 ```
-<!-- end code block -->
 
 #### Numeric expressions
 
 Simple calculations:
 
-<!-- start code block file="snippets/numerics1.js" -->
 ```js
 5 + 3
 7 - 2
 11 % 5
 ```
-<!-- end code block -->
 
 Expressions with variables only change values with assignment.
 
-<!-- start code block file="snippets/numerics2.js" -->
 ```js
 let height
 height = 80
@@ -240,13 +225,11 @@ console.log(height)
 height = height - 10
 console.log(height)
 ```
-<!-- end code block -->
 
 What will `height` be at the end of the 3 lines above?
 
 Now let's compare some common methods of counting.
 
-<!-- start code block file="snippets/numerics3.js" -->
 ```js
 let i
 i = 0
@@ -260,32 +243,27 @@ i
 i++
 i
 ```
-<!-- end code block -->
 
 *Note*: `++i` and `i++` are not the same! `++i` will increment i by 1 and then
 evaluate i, whereas `i++` will evaluate i and then increment.
 
 #### String expressions
 
-<!-- start code block file="snippets/strings1.js" -->
 ```js
 const givenName = 'Brian'
 const surname = 'Berzellini'
 const fullName = givenName + ' ' + surname
 console.log(fullName)
 ```
-<!-- end code block -->
 
 Try it with your name now!
 
-<!-- start code block file="snippets/strings2.js" -->
 ```js
 let bornOn = '1982 - 9 - 29'
 console.log(bornOn)
 bornOn = 1982 - 9 - 29
 console.log(bornOn)
 ```
-<!-- end code block -->
 
 What happens if you don't enter the date as a string?
 
@@ -296,7 +274,6 @@ interpreted as a boolean.  We'll use that fact when we get to flow control.
 Boolean expression combine using the logical and `&&` and logical or `||`
 operators.
 
-<!-- start code block file="snippets/boolean1.js" -->
 ```js
 let height = 72
 height === 60
@@ -305,7 +282,6 @@ height = 76
 height >= 72
 height > 72 && height < 78
 ```
-<!-- end code block -->
 
 The logical operators 'short circuit', which means they stop evaluating operands
 as soon as the expression is `false` for `&&`, or `true` for `||`.
@@ -326,14 +302,12 @@ All values in JS are inherently truthy with the exception of these 6 values:
 *Note*:  The negation of a truthy value is `false` and the negation of a falsy
 value is `true`.
 
-<!-- start code block file="snippets/boolean2.js" -->
 ```js
 const truthyValue = 'A non-empty string'
 const falsyValue = 0
 console.log(!truthyValue)
 console.log(!falsyValue)
 ```
-<!-- end code block -->
 
 #### Demo: Type conversions
 
@@ -378,10 +352,8 @@ a good point of reference for debugging.
 
 Open `bin/ifStatement.js` and we'll type some code in...
 
-<!-- start code block file="snippets/conditionals1.js" -->
 ```js
-// We'll learn about process.argv later in the course
-const name = process.argv[2]
+let name
 if (name === 'Brian') {
   console.log('Hi, Brian!')
 } else if (name === 'Jeff') {
@@ -392,7 +364,6 @@ if (name === 'Brian') {
   console.log('Hi, stranger.')
 }
 ```
-<!-- end code block -->
 
 Save this file and return to your terminal.
 Type `node bin/ifStatement.js Brian`
@@ -402,15 +373,14 @@ Press the UP arrow on your keyboard to reload the previous line and change
 (`enter`).
 
 ##### Ternary Operator
+
 Ternary operators are basically a shorthand way of writing `if else` statements.
 An example of a ternary operator can be found below:
 
-<!-- start code block file="snippets/ternaryOperator1.js" -->
 ```js
 const height = 72
 height >= 72 ? console.log('You can Ride') : console.log('Tea Cups Only')
 ```
-<!-- end code block -->
 
 This example might look a little bit confusing, but it is relatively simple if
 we break it down: First, the statement before the question mark is evaluated as
@@ -419,9 +389,9 @@ to the left of the colon is executed. If it is `false`, the statement to the
 right of the colon is executed.
 
 #### `while` Loops
+
 A simple while loop that logs from 0 - 9
 
-<!-- start code block file="snippets/loops2.js" -->
 ```js
 let i = 0
 while (i < 10) {
@@ -429,15 +399,11 @@ while (i < 10) {
   i++
 }
 ```
-<!-- end code block -->
 
 Open `bin/whileLoop.js` and we'll type some code in...
 
-<!-- start code block file="snippets/conditionals2.js" -->
 ```js
-'use strict'
-
-let count = process.argv[2]
+let count = 1
 
 while (count < 5) {
   console.log('Inside of the loop, count is ' + count)
@@ -446,14 +412,12 @@ while (count < 5) {
 
 console.log('Outside of the loop, count is ' + count)
 ```
-<!-- end code block -->
 
 Save this file and return to your terminal.
-Type `node bin/whileLoop.js 1`
+Type `node bin/whileLoop.js`
 
-Press the UP arrow on your keyboard to reload the previous line and change
-`1` to `5` OR type `node bin/whileLoop.js 5`. and press `return`
-(`enter`).
+What if we change the value of `count`? Let's change the script so that we make
+`count = 5` and then we can run the script again to see what changed.
 
 #### String Interpolation
 
@@ -462,25 +426,22 @@ variable `answer` in order to display the result of the user's input. The
 combination of a string and a variable is called string interpolation. The
 syntax for it looks like this:
 
-<!-- start code block file="snippets/stringInterpolation1.js" -->
 ```js
 console.log(`Sorry, your guess '${answer}', isn't correct.`)
 ```
-<!-- end code block -->
 
 This method of string interpolation is done using Template Literals.
 *Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
+
 Open `bin/forLoop.js` and we'll type some code in...
 
-<!-- start code block file="snippets/loops1.js" -->
 ```js
 for (let i = 0; i < 10; i++) {
   console.log(i)
 }
 ```
-<!-- end code block -->
 
 Save this file and return to your terminal.
 Think about what you expect this file to produce to the terminal...
@@ -488,7 +449,6 @@ Now type `node bin/forLoop.js` and hit ENTER.
 
 That for loop was _almost_ equivalent to:
 
-<!-- start code block file="snippets/loops2.js" -->
 ```js
 let i = 0
 while (i < 10) {
@@ -496,10 +456,9 @@ while (i < 10) {
   i++
 }
 ```
-<!-- end code block -->
 
 Nesting conditionals in loops:
-<!-- start code block file="snippets/loops3.js" -->
+
 ```js
 for (let i = 0; i < 10; i++) {
   if (i === 5) {
@@ -509,7 +468,6 @@ for (let i = 0; i < 10; i++) {
   }
 }
 ```
-<!-- end code block -->
 
 Save. Think about what you expect this file to produce to the terminal...
 What do we type in the terminal to run our code?
@@ -517,30 +475,34 @@ What do we type in the terminal to run our code?
 #### Lab: Build a Script Yourself
 
 Try building your own script in the file titled `bin/guessAge.js`. Have
-this script accept an age argument, and if they're older than 90 print to the
-console "What a rich life you have led!" If they're under the age of 10 print
-"You should be playing outside!" If they're between 10 and 90, print
-"I should have made this age range smaller!". You should be able to run the
-file like `node bin/guessAge.js 100`.
+this script start with an age variable. Then with an if statement display
+something different depending on the age.
+
+If they're older than 90 print to the console "What a rich life you have led!"
+
+If they're under the age of 10 print "You should be playing outside!"
+
+If they're between 10 and 90, print "I should have made this age range
+smaller!". You should be able to run the file like `node bin/guessAge.js`.
+
+Change the value of the `age` variable to make sure your if statement can print
+all three sentences.
 
 If you finish early, challenge yourself by designing your own script that runs
 something using two or more examples of flow control we've introduced today!
 Save it in `bin/bonusChallenge.js`
 
-*Note*: refer to the beginning lines of our `bin/ifStatement.js` code to enable
-working with user input.
-
 ## Additional Resources
 
 See the following sections at
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide>
+[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 
-- Grammar and types
-- Control flow and error handling
-- Loops and iteration
-- Expressions and operators
-- Number and [dates](https://en.wikipedia.org/wiki/ISO_8601)
-- Text formatting
+- [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Number and dates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [Text formatting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 
 ## [License](LICENSE)
 
