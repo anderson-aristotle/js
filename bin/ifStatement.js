@@ -1,4 +1,4 @@
-let name
+const name = 'Mike' // Change me to a special name!
 
 console.log(name)
 
