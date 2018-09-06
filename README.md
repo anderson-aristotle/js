@@ -299,7 +299,7 @@ All values in JS are inherently truthy with the exception of these 6 values:
 - `NaN`
 - `''`, `""`, and ` `` `
 
-*Note*:  The negation of a truthy value is `false` and the negation of a falsy
+*Note*:  The negation (`!`) of a truthy value is `false` and the negation of a falsy
 value is `true`.
 
 ```js
