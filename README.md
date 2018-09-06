@@ -365,12 +365,9 @@ if (name === 'Brian') {
 }
 ```
 
-Save this file and return to your terminal.
-Type `node bin/ifStatement.js Brian`
+Change the string value of the `name` variable and save your file.
 
-Press the UP arrow on your keyboard to reload the previous line and change
-`Brian` to `Lauren` OR type `node bin/ifStatement.js Lauren`. and press `return`
-(`enter`).
+Return to your terminal and re-run the script.
 
 ##### Ternary Operator
 
