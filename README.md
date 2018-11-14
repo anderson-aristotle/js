@@ -325,6 +325,8 @@ Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 opposite of its operand. If its single operand is truthy, it returns false;
 otherwise, it returns true.
 
+[*Javascript 'Wat' Gotchas (1:25)*](https://www.destroyallsoftware.com/talks/wat)
+
 ### Code Along: Flow Control
 
 Remember how we used node as a REPL earlier? It actually has a completely
