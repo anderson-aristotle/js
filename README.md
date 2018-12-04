@@ -36,12 +36,13 @@ By the end of this, developers should be able to:
 
 ### Primitive types
 
-JavaScript has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures): `Number`, `String`, `Boolean`, `null`, and `undefined`.
+JavaScript has 5 primitive [types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures):
+`Number`, `String`, `Boolean`, `null`, and `undefined`.
 
 | Type      | Examples                        |
 |:----------|:--------------------------------|
-| Number    | `1`, `42`, `-3` `1.04`, `NaN`, `Infinity`         |
-| String    | `'a simple string'`, `"Hi, my name is Chris."`, or empty strings: `''`, `""` |
+| Number    | `1`, `42`, `-3` `1.04`, `NaN`, `Infinity`|
+| String    | `'a simple string'`, `"Hi, my name is Chris."`, or empty strings: `''`, `""`|
 | Boolean   | `true`, `false`                 |
 | null      | `null`                          |
 | undefined | `undefined`                     |
@@ -136,12 +137,12 @@ from higher to lower precedence.
 | grouping                                             | n/a           | `()`                           |
 | postfix increment                                    | n/a           | `++` `--`                      |
 | negation, numeric conversion, prefix increment, type | right-to-left | `!` `-` `+` `++` `--` `typeof` |
-| multiplication, division, modulo                     | left-to-right | `*` `/` `%`                        |
-| addition, subtraction                                | left-to-right | `+` `-`                          |
+| multiplication, division, modulo                     | left-to-right | `*` `/` `%`                    |
+| addition, subtraction                                | left-to-right | `+` `-`                        |
 | relation, instance                                   | left-to-right | `<` `<=` `>` `>=` `instanceof` |
 | strict equality                                      | left-to-right | `===` `!==`                    |
 | logical and                                          | left-to-right | `&&`                           |
-| logical or                                           | left-to-right | &#124;&#124;                          |
+| logical or                                           | left-to-right | &#124;&#124;                   |
 | conditional                                          | right-to-left | `?:`                           |
 | assignment                                           | right-to-left | `=` `+=` `-=` `*=` `/=` `%=`   |
 
@@ -324,6 +325,8 @@ Note the difference between `3 + 5 + ' times'` and `'times ' + 3 + 5`?
 opposite of its operand. If its single operand is truthy, it returns false;
 otherwise, it returns true.
 
+[*Javascript 'Wat' Gotchas (1:25)*](https://www.destroyallsoftware.com/talks/wat)
+
 ### Code Along: Flow Control
 
 Remember how we used node as a REPL earlier? It actually has a completely
@@ -428,7 +431,8 @@ console.log(`Sorry, your guess '${answer}', isn't correct.`)
 ```
 
 This method of string interpolation is done using Template Literals.
-*Note*: Make sure you are using *backticks* instead of single or double quotes. [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+*Note*: Make sure you are using *backticks* instead of single or double quotes.
+[more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 #### `for` Loops
 
