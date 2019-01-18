@@ -13,5 +13,18 @@ I think the most important thing is consistency and not going against the grain 
 REPL Whiteboard Diagram:
 ![REPL whiteboard image](https://media.git.generalassemb.ly/user/16103/files/f5f1a480-fdf1-11e8-993f-45c013fed747)
 
-&& and || Operators Whiteboard Diagram: 
+&& and || Operators Whiteboard Diagram:
 ![AND and OR operator diagram](https://media.git.generalassemb.ly/user/16103/files/f853fe80-fdf1-11e8-901e-7c39a07c6fcd)
+
+## Visuals:
+
+These can be given out or shown during the lesson to help ELL and visual-learners.
+
+Assignment Expression Visual:
+![Assignment Expression Visual](https://media.git.generalassemb.ly/user/16103/files/22241a00-fe20-11e8-9fe2-0cd473b6c817)
+
+String Interpolation Visual:
+![String Interpolation Visual](https://media.git.generalassemb.ly/user/16103/files/27816480-fe20-11e8-957b-4a012a9507d7)
+
+Ternary Operator Visual:
+![Ternary Operator Visual](https://media.git.generalassemb.ly/user/16103/files/2a7c5500-fe20-11e8-880e-6175905cd6cc)
